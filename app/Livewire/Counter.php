@@ -9,6 +9,7 @@ class Counter extends Component
 {
     public int $counter = 0;
 
+
     public function render(): View
     {
         return view('livewire.counter');
