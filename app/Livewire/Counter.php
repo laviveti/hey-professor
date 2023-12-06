@@ -8,8 +8,16 @@ use Livewire\Component;
 class Counter extends Component
 {
     public int $counter = 0;
+    public string $name = '';
+    public string $lastName = '';
 
-
+    public function mount()
+    {
+        $this->fill([
+            'name' => 'Rafael',
+            'lastName' => 'Lunardeli'
+        ]);
+    }
     public function render(): View
     {
         return view('livewire.counter');
