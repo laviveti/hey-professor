@@ -11,6 +11,10 @@ class Counter extends Component
     public string $name = '';
     public string $lastName = '';
 
+    public function count(): void
+    {
+        $this->counter++;
+    }
     public function mount()
     {
         $this->fill([
@@ -23,8 +27,8 @@ class Counter extends Component
         return view('livewire.counter');
     }
 
-    public function count(): void
+    public function refresh()
     {
-        $this->counter++;
+        $this->reset('name', 'lastName');
     }
 }
