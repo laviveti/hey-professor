@@ -1,5 +1,5 @@
 <form
-  wire:submit='calculate'
+  wire:submit.throttle.5s='calculate'
   class="mx-auto flex w-3/12 flex-col bg-slate-700 p-3 [&>button[wire\:click]]:mt-6 [&>button[wire\:click]]:w-fit [&>button[wire\:click]]:self-center [&>button[wire\:click]]:bg-green-500">
   <x-text-input autofocus placeholder="primeiro número"
     wire:model='num1' />
