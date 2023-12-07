@@ -15,6 +15,10 @@ class Counter extends Component
     {
         $this->counter++;
     }
+    public function count(): void
+    {
+        $this->counter++;
+    }
     public function mount()
     {
         $this->fill([
@@ -27,6 +31,7 @@ class Counter extends Component
         return view('livewire.counter');
     }
 
+    public function refresh()
     public function refresh()
     {
         $this->reset('name', 'lastName');
