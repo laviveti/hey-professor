@@ -19,4 +19,8 @@
     <x-secondary-button
       @click="$wire.name = 'Chapolin'">Change</x-secondary-button>
   </div>
+
+  <br><br>
+
+  Name: {{ $this->fullName }}
 </div>
