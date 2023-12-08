@@ -8,22 +8,26 @@ use Livewire\Component;
 
 class UserForm extends Component
 {
-  // #[Rule(['required', 'string', 'max:255', 'min:2'])]
+  #[Rule(['required', 'string', 'max:255', 'min:2'])]
   public string $name;
-  // #[Rule(['required', 'email', 'max:255', 'min:2'])]
+  #[Rule(['required', 'email', 'max:255', 'min:2'])]
   public string $email;
-  // #[Rule(['required', 'string', 'max:255', 'min:2', 'confirmed'])]
+  #[Rule(['required', 'string', 'max:255', 'min:2', 'confirmed'])]
   public string $password;
   public string $password_confirmation;
 
-  public function rules()
-  {
-    return [
-      'name' => ['required', 'string', 'max:255', 'min:2'],
-      'email' => ['required', 'email', 'max:255', 'min:2'],
-      'password' => ['required', 'string', 'max:255', 'min:2', 'confirmed'],
-    ];
-  }
+  // public function updated($attr, $value)
+  // {
+  //   $this->validateOnly($attr);
+  // }
+  // public function rules()
+  // {
+  //   return [
+  //     'name' => ['required', 'string', 'max:255', 'min:2'],
+  //     'email' => ['required', 'email', 'max:255', 'min:2'],
+  //     'password' => ['required', 'string', 'max:255', 'min:2', 'confirmed'],
+  //   ];
+  // }
   public function render()
   {
     return view('livewire.user-form');
