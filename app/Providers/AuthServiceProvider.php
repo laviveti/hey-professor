@@ -19,6 +19,6 @@ class AuthServiceProvider extends ServiceProvider
 
   public function boot(): void
   {
-    Gate::define('add10', fn (User $user, string $prop) => ($prop == 'num2'));
+    // Gate::define('add10', fn (User $user, string $prop) => ($prop == 'num2'));
   }
 }
