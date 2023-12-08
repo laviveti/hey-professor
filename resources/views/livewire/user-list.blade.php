@@ -1,4 +1,4 @@
-<div>
+<div class="col-span-2">
   <ul>
     @foreach ($this->users as $user)
       <li class="mb-3">

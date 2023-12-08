@@ -10,11 +10,15 @@
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div
         class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
-        <div class="flex w-full p-6 text-gray-900 dark:text-gray-100">
+        <div
+          class="grid w-full grid-cols-4 gap-20 p-6 text-gray-900 dark:text-gray-100">
 
           {{-- @livewire('counter') --}}
+          <div wire:poll.5000ms>
+            <livewire:user-list />
+          </div>
+          <livewire:user-form />
 
-          <livewire:calculator />
 
         </div>
       </div>
@@ -24,7 +28,8 @@
         class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
         <div class="p-6 text-gray-900 dark:text-gray-100">
 
-          <livewire:counter-inline :specialNumber="12" />
+          <livewire:calculator />
+          {{-- <livewire:counter-inline :specialNumber="12" /> --}}
 
         </div>
       </div>
