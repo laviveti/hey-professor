@@ -22,8 +22,16 @@ class Calculator extends Component
 
     $this->result = eval('return ' . $tmp);
   }
-  public function add10(string $prop)
+  public function add10($prop)
   {
+    $this->authorize('add10', $prop);
     $this->$prop += 10;
   }
+
+  public function delete($userId)
+  {
+    $this->authorize('delete-user', $userId);
+  }
 }
+
+// -----
