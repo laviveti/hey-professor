@@ -14,12 +14,15 @@
           class="grid w-full grid-cols-4 gap-20 p-6 text-gray-900 dark:text-gray-100">
 
           {{-- @livewire('counter') --}}
-          <div wire:poll.5000ms>
-            <livewire:user-list />
-          </div>
-          <livewire:user-form />
 
+          <livewire:user-list />
 
+          <livewire:create-user />
+
+          <livewire:user-resume />
+
+          <livewire:edit-user :user="\App\Models\User::find(2)" />
+          >
         </div>
       </div>
     </div>
