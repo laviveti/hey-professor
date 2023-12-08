@@ -11,9 +11,16 @@
     <option value="/">/</option>
   </select>
 
-  <x-text-input placeholder="segundo número" wire:model='num2' />
+  <x-text-input placeholder="segundo número"
+    wire:model='num2' />
 
-  <x-primary-button type='submit'>Calcular</x-primary-button>
+  <x-primary-button
+    class="mt-4 disabled:bg-zinc-300 disabled:text-zinc-500 disabled:hover:bg-zinc-300"
+    type='submit'>
+    <span wire:loading.class='hidden'
+      wire:target="calculate">Calcular</span>
+    <span wire:loading wire:target="calculate">Calculando...</span>
+  </x-primary-button>
 
   <p class="mt-10 rounded-lg bg-sky-900 p-2 text-xl">
     Resultado: <span class="text-2xl">{{ $result }}</span>

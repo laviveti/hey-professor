@@ -16,6 +16,8 @@ class Calculator extends Component
   }
   public function calculate()
   {
+
+    sleep(2);
     $tmp = "{$this->num1}{$this->operator}{$this->num2};";
 
     $this->result = eval('return ' . $tmp);
